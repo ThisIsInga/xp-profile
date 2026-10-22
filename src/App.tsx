@@ -6,7 +6,11 @@ function App() {
 
   return (
     <>
-      <Window title="profile" children={<Profile />} />
+      <section className='main_bg'>
+        <div className='main_center'>
+          <Window title="profile" children={<Profile />} />
+        </div>
+      </section>
     </>
   )
 }

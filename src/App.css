@@ -1,0 +1,10 @@
+.main_bg {
+  background-image: url('./assets/Bg/bg.jpg');
+  filter: blur;
+}
+
+.main_center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
