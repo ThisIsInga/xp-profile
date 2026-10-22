@@ -1,0 +1,28 @@
+import "xp.css/dist/XP.css";
+import type { ReactNode } from 'react';
+
+interface WindowProps {
+  title: string;
+  width?: string | number;
+  children: ReactNode;
+}
+
+function Window({ title, width = '300px', children }: WindowProps) {
+ return (
+    <div className="window" style={{width}}>
+        <div className="title-bar">
+          <div className="title-bar-text">{title}</div>
+          <div className="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div className="window-body">
+          {children}
+        </div>
+    </div>
+ )
+}
+
+export default Window;
