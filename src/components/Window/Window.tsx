@@ -7,7 +7,7 @@ interface WindowProps {
   children: ReactNode;
 }
 
-function Window({ title, width = '100%', children }: WindowProps) {
+function Window({ title, width = 'auto', children }: WindowProps) {
  return (
     <div className="window" style={{width}}>
         <div className="title-bar">

@@ -1,67 +1,81 @@
 import style from './Profile.module.css';
+import avatar from './../../assets/Profile/user_picture.jpg';
 
 function Profile() {
-    return(
-        <>
-                <div className={style.profile}>
-                    <div className={style.user}>
-                        <div className={style.backgroundImage}>
-                            <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHxNdzde8hDVr7qFnuFOMY76dgt4lt7GWh_Cs5eRxyg&s=10"
-                            alt="Cover"
-                            />
-                        </div>
+  return (
+    <div className={style.profile}>
 
-                        <div className={style.infoUser}>
-                            <div className={style.userAvatar}>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6iuIMIPjUVhv5rNX02BIWrzgRdENvVr94um4NbIZTjw&s=10" alt="Avatar" />
-                            </div>
-                            <div className={style.statistic}>
-                            <div>
-                                <h2>45K</h2>
-                                <p>Сообщений</p>
-                            </div>
-                            <div>
-                                <h2>45K</h2>
-                                <p>Сообщений</p>
-                            </div>
-                            <div>
-                                <h2>45K</h2>
-                                <p>Сообщений</p>
-                            </div>
-                            {/* Кнопка отображается только если это не собственный профиль */}
-                            {/* {!isOwnProfile && (
-                                <div className={style.buttonBorder}>
-                                <button>Читать</button>
-                                </div>
-                            )} */}
-                            </div>
-                        </div>
+      <div className={style.backgroundImage}>
+        <img src="..." alt="Cover" />
+      </div>
 
-                        <div className={style.addUser}>
-                            <div className={style.userName}>
-                            <h2>Инга</h2>
-                            <p>@this_is_inga</p>
-                            </div>
-                            <div className={style.description}>
-                            <p>реально инга</p>
-                            </div>
-                            <div className={style.addInfo}>
-                            <p>Хабаровск</p>
-                            <p>https://www.youtube.com/watch?v=jDqDVRh0hbI</p>
-                            <p>12.08.2007</p>
-                            </div>
-                        </div>
+      <div className={style.infoUser}>
+        <div className={style.userAvatar}>
+          <img src={avatar} alt="Avatar" />
+        </div>
+        <div className={style.statistic}>
+          <div><h2>45K</h2><p>Сообщений</p></div>
+          <div><h2>45K</h2><p>Сообщений</p></div>
+          <div><h2>45K</h2><p>Сообщений</p></div>
+        </div>
+      </div>
 
-                        {/* {message && <p className={style.error}>{message}</p>} */}
+      <div className={style.addUser}>
+        <div className={style.userName}>
+          <h2>Инга</h2>
+          <p>@this_is_inga</p>
+        </div>
+        <div className={style.description}>
+          <p>реально инга</p>
+        </div>
+        <div className={style.addInfo}>
+          <p>Город: Хабаровск</p>
+          <p>Сайт: <a href="https://www.youtube.com/watch?v=jDqDVRh0hbI">https://www.youtube.com/watch?v=jDqDVRh0hbI</a></p>
+          <p>Дата: 12.08.2007</p>
+        </div>
+      </div>
 
-                        <div className={style.postsUser}>
-                            посты
-                        </div>
-                    </div>
-                </div>
-        </>
-    )
+      <div className={style.postsUser}>
+        <div className={style.message}>
+          <div className={style.messageAvatar}>
+            <img
+              src={avatar}
+              alt="Avatar"
+            />
+          </div>
+
+          <div className={style.messageInfo}>
+            <div className={style.messageInfoUser}>
+              <div className={style.messageUserName}>
+                <span>Инга</span>
+              </div>
+              <div className={style.userTime}>
+                <p>5 часов назад</p>
+              </div>
+            </div>
+
+            <div className={style.messageInfoText}>
+              <p>ЧТООО</p>
+            </div>
+
+            <div className={style.messageInfoImg}>
+              <img
+                src="https://vet-centre.by/wp-content/uploads/folde16/11/kot-eti-udivitelnye-kotiki.jpg"
+                alt="Изображение"
+              />
+            </div>
+
+            <div className={style.messageInfoFeedback}>
+              <p className={style.feedbackReply}>123</p>
+              <p className={style.feedbackLike}>123</p>
+              <p className={style.feedbackExport}>123</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  );
 }
 
 export default Profile;
