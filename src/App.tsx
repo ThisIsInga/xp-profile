@@ -8,7 +8,9 @@ function App() {
     <>
       <section className='main_bg'>
         <div className='main_center'>
-          <Window title="profile" children={<Profile />} />
+          <Window title="profile">
+            <Profile />
+          </Window>
         </div>
       </section>
     </>

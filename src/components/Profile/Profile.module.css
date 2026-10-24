@@ -3,8 +3,8 @@
    ========================================= */
 
 .profile {
-  max-width: 60rem;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -198,10 +198,10 @@
 .messageInfoImg img {
   display: block;
   width: 100%;
-  max-width: 33rem;
+  max-width: 38rem;
   aspect-ratio: 520 / 342;
-  object-fit: cover;
-  border-radius: clamp(0.5rem, 1vw, 1.25rem);
+  /* object-fit: cover; */
+  /* border-radius: clamp(0.5rem, 1vw, 1.25rem); */
 }
 
 .messageInfoFeedback {
@@ -216,10 +216,23 @@
 .messageInfoFeedback > p {
   margin: 0;
   padding: 0.3125rem 0.625rem;
-  border-radius: 0.9375rem;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   user-select: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  line-height: 1;
+}
+.feedbackReply::before {
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  flex-shrink: 0;
+  background: url('./../../assets/Post/reply.png') center / contain no-repeat;
 }
 
 .feedbackReply:hover {
@@ -227,23 +240,32 @@
   color: #1da1f2;
 }
 
+.feedbackLike::before {
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  flex-shrink: 0;
+  background: url('./../../assets/Post/like.png') center / contain no-repeat;
+}
+
 .feedbackLike:hover {
   background-color: rgba(255, 71, 87, 0.1);
   color: #ff4757;
 }
 
+.feedbackExport::before {
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  flex-shrink: 0;
+  background: url('./../../assets/Post/export.png') center / contain no-repeat;
+}
+
 .feedbackExport:hover {
   background-color: rgba(23, 191, 99, 0.1);
   color: #17bf63;
-}
-
-.messageInfoFeedback > p:active {
-  transform: scale(0.95);
-}
-
-.messageInfoFeedback > p:focus-visible {
-  outline: 2px solid #1da1f2;
-  outline-offset: 2px;
 }
 
 

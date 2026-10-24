@@ -14,9 +14,9 @@ function Profile() {
           <img src={avatar} alt="Avatar" />
         </div>
         <div className={style.statistic}>
-          <div><h2>45K</h2><p>Сообщений</p></div>
-          <div><h2>45K</h2><p>Сообщений</p></div>
-          <div><h2>45K</h2><p>Сообщений</p></div>
+          <div><h2>318</h2><p>Подписчиков</p></div>
+          <div><h2>22,871</h2><p>Просмотров</p></div>
+          <div><h2>83</h2><p>Публикаций</p></div>
         </div>
       </div>
 
@@ -30,7 +30,7 @@ function Profile() {
         </div>
         <div className={style.addInfo}>
           <p>Город: Хабаровск</p>
-          <p>Сайт: <a href="https://www.youtube.com/watch?v=jDqDVRh0hbI">https://www.youtube.com/watch?v=jDqDVRh0hbI</a></p>
+          {/* <p>Сайт: <a href="https://www.youtube.com/watch?v=jDqDVRh0hbI">https://www.youtube.com/watch?v=jDqDVRh0hbI</a></p> */}
           <p>Дата: 12.08.2007</p>
         </div>
       </div>
@@ -66,14 +66,13 @@ function Profile() {
             </div>
 
             <div className={style.messageInfoFeedback}>
-              <p className={style.feedbackReply}>123</p>
-              <p className={style.feedbackLike}>123</p>
-              <p className={style.feedbackExport}>123</p>
+              <p className={style.feedbackLike}>11112</p>
+              <p className={style.feedbackReply}>132</p>
+              <p className={style.feedbackExport}>120</p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 }
