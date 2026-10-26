@@ -1,5 +1,6 @@
 import style from './Profile.module.css';
 import avatar from './../../assets/Profile/user_picture.jpg';
+import Posts from './../Posts/Posts.tsx';
 import type { Lang } from '../../App';
 
 interface ProfileProps {
@@ -15,8 +16,6 @@ function Profile({lang}: ProfileProps) {
     bio: lang === 'ru' ? 'реально инга' : 'really inga',
     city: lang === 'ru' ? 'Город: Хабаровск' : 'City: Khabarovsk',
     date: lang === 'ru' ? 'Дата: 12.08.2007' : 'Date: 12.08.2007',
-    time: lang === 'ru' ? '5 часов назад' : '5 hours ago',
-    postText: lang === 'ru' ? 'ЧТООО' : 'WHAAAT',
   }
 
   return (
@@ -52,44 +51,8 @@ function Profile({lang}: ProfileProps) {
         </div>
       </div>
 
-      <div className={style.postsUser}>
-        <div className={style.message}>
-          <div className={style.messageAvatar}>
-            <img
-              src={avatar}
-              alt="Avatar"
-            />
-          </div>
 
-          <div className={style.messageInfo}>
-            <div className={style.messageInfoUser}>
-              <div className={style.messageUserName}>
-                <span>{t.name}</span>
-              </div>
-              <div className={style.userTime}>
-                <p>{t.time}</p>
-              </div>
-            </div>
-
-            <div className={style.messageInfoText}>
-              <p>{t.postText}</p>
-            </div>
-
-            <div className={style.messageInfoImg}>
-              <img
-                src="https://vet-centre.by/wp-content/uploads/folde16/11/kot-eti-udivitelnye-kotiki.jpg"
-                alt="Изображение"
-              />
-            </div>
-
-            <div className={style.messageInfoFeedback}>
-              <p className={style.feedbackLike}>11112</p>
-              <p className={style.feedbackReply}>132</p>
-              <p className={style.feedbackExport}>120</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Posts lang={lang} />
     </div>
   );
 }
