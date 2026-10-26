@@ -17,6 +17,10 @@ export interface PostData {
   reposts: number;
 }
 
+interface PostsProps {
+  lang: Lang;
+}
+
 interface PostProps {
   post: PostData;
   lang: Lang;
